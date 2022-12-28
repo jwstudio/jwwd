@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.row {
+  margin: 0px 25px;
+}
+
 .row::after {
   content: "";
   clear: both;
@@ -71,6 +75,11 @@
 body {
   margin: 0px;
   font-family: "Plus Jakarta Sans";
+  font-size: medium;
+}
+
+a {
+  color: #005baf;
 }
 
 #header {
@@ -79,4 +88,32 @@ body {
 }
 #header h1 span {
   color: #005baf;
+}
+#header p {
+  color: #52525b;
+}
+
+#hero [class*=col-] {
+  text-align: center;
+}
+#hero [class*=col-]:not(:last-child) {
+  border-right: solid #52525b 1px;
+}
+@media only screen and (max-width: 768px) {
+  #hero [class*=col-]:not(:last-child) {
+    border: none;
+  }
+}
+#hero table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  display: table-cell;
+}
+#hero table td:first-child {
+  padding-right: 20px;
+  border-right: dotted 2px #52525b;
+}
+#hero table td:last-child {
+  padding-left: 10px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,13 +1,19 @@
 // ctrl + shift + p watch sass
 $primary: #005baf;
+$grey: #52525b;
 $between: 40px;
+$margin: 25px;
 
 // Grid
 
 * {
     box-sizing: border-box;
 }
-  
+
+.row {
+    margin: 0px $margin;
+}
+
 .row::after {
     content: "";
     clear: both;
@@ -32,6 +38,7 @@ $between: 40px;
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
   
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
@@ -46,6 +53,11 @@ $between: 40px;
 body {
     margin: 0px;
     font-family: "Plus Jakarta Sans";
+    font-size: medium;
+}
+
+a {
+    color: $primary;
 }
 
 #header {
@@ -53,5 +65,35 @@ body {
     padding: $between;
     h1 span {
         color: $primary;
+    }
+    p {
+        color: $grey;
+    }
+}
+
+#hero {
+    [class*="col-"] {
+        text-align: center;
+    }
+    [class*="col-"]:not(:last-child) {
+        border-right: solid $grey 1px;
+    }
+    @media only screen and (max-width: 768px) {
+        [class*="col-"]:not(:last-child) {
+            border: none;
+        }
+    }
+    table {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        display: table-cell;
+        td:first-child {
+            padding-right: 20px;
+            border-right: dotted 2px $grey;
+        }
+        td:last-child {
+            padding-left: 10px;
+        }
     }
 }
