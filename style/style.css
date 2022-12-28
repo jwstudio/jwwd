@@ -1,7 +1,12 @@
 body {
-  background-color: yellow;
+  margin: 0px;
+  font-family: "Plus Jakarta Sans";
 }
 
-h1 {
-  color: purple;
+#header {
+  text-align: center;
+  padding: 40px;
+}
+#header h1 span {
+  color: #005baf;
 }/*# sourceMappingURL=style.css.map */

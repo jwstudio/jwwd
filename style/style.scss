@@ -1,9 +1,16 @@
 // ctrl + shift + p watch sass
+$primary: #005baf;
+$between: 40px;
 
 body {
-    background-color: yellow;
+    margin: 0px;
+    font-family: "Plus Jakarta Sans";
 }
 
-h1 {
-    color: purple;
+#header {
+    text-align: center;
+    padding: $between;
+    h1 span {
+        color: $primary;
+    }
 }
